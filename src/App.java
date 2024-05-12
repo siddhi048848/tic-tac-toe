@@ -11,10 +11,11 @@ public class App {
         Scanner scn=new Scanner(System.in);
         System.out.println("Please enter board size :");
         int size=scn.nextInt();
-        System.out.println("Please enter default symbol :");
-         
-        char defaultsymbol =scn.next().charAt(0);
+        scn.nextLine(); 
         
+        System.out.println("Please enter default symbol :");
+        char defaultsymbol =scn.next().charAt(0);
+        scn.nextLine();
 
         Board b=new Board(size,defaultsymbol);
         b.printBoardConfig();
@@ -27,7 +28,6 @@ public class App {
 
         Player p1=new Player();
         p1.setPlayerNameAndSymbol(name1,symbol1);
-        //p1.setPlayerDetails("Siddhi",'x',"Bihar","6203882414","2022ugcs040@nitjsr.ac.in",20);
         p1.getPlayerNameAndSymbol();
 
         System.out.println("Please enter the name of player 2 : ");
